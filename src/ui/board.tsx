@@ -249,12 +249,12 @@ const Board = ({ board = presets.Beginner }) => {
 
   let remainingMineCount = getRemainingMineCount(cells, board.mines);
 
-  let rowArray = React.useMemo(
+  let rowArray = React.useMemo<null[]>(
     () => Array(board.rows).fill(null),
     [board.rows]
   );
   let getColumnArray = React.useCallback(
-    (rowIndex) =>
+    (rowIndex: number): Cell[] =>
       cells.slice(
         board.columns * rowIndex,
         board.columns * rowIndex + board.columns
@@ -363,7 +363,7 @@ const GridCell = ({
 }) => {
   let gameIsOver = gameState === "won" || gameState === "lost";
   let isRevealed = status === "exploded" || status === "revealed";
-  let ref = React.useRef(null);
+  let ref = React.useRef<HTMLButtonElement>(null);
 
   return (
     <div

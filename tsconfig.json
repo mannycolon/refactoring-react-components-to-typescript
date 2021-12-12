@@ -1,0 +1,10 @@
+{
+	"include": ["./src"],
+	"compilerOptions": {
+		"allowJs": true, // because we are doing an incremental refactoring we will still use a bunch of js files
+		"checkJs": false, // we can use typescript to check plain javascript files with all of your types written in jsdocs syntax
+		"esModuleInterop": false,
+		"noEmit": true,
+		"jsx": "preserve",
+	}
+}

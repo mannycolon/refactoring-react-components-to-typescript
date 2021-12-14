@@ -93,18 +93,6 @@ interface RadioGroupProps {
   name: string;
 }
 
-interface RadioProps {
-  children: React.ReactNode;
-  id: string | number;
-  value: string | number;
-}
-
-interface RadioLabelProps
-  extends Omit<React.ComponentPropsWithRef<"label">, "htmlfor"> {}
-
-interface RadioInputProps
-  extends Omit<React.ComponentPropsWithRef<"input">, "htmlfor"> {}
-
 function useRadioGroupContext(name: string) {
   let ctx = React.useContext(RadioGroupContext);
 
@@ -128,3 +116,15 @@ function useRadioContext(name: string) {
 
   return ctx;
 }
+
+interface RadioProps {
+  children: React.ReactNode;
+  id: string | number;
+  value: string | number;
+}
+
+interface RadioLabelProps
+  extends Omit<React.ComponentPropsWithRef<"label">, "htmlfor"> {}
+
+interface RadioInputProps
+  extends Omit<React.ComponentPropsWithRef<"input">, "htmlfor"> {}

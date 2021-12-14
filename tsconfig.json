@@ -6,5 +6,6 @@
 		"esModuleInterop": false,
 		"noEmit": true,
 		"jsx": "preserve",
+		"strict": false
 	}
 }

@@ -1,6 +1,6 @@
 # Refactoring React Components to TypeScript
 
-This is the code for my upcoming egghead course. Stay tuned for the link!
+POC on how to incrementally adopt TypeScript in a react project.
 
 ## The App: Minesweeper
 
